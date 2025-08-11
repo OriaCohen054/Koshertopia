@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    android:padding="24dp">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_LBL_back"
+        android:text="@string/back"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_medium"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"/>
+
+
+    <!-- לוגו -->
+
+    <!-- כותרת Log in -->
+    <ImageView
+        android:id="@+id/login_IMG_logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="-50dp"
+        android:contentDescription="Logo"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/login_LBL_back" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_LBL_title"
+        android:text="Log in"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        android:fontFamily="@font/poppins_regular"
+        app:layout_constraintTop_toBottomOf="@id/login_IMG_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="-40dp"
+       />
+
+    <!-- שדה אימייל -->
+    <EditText
+        android:id="@+id/login_EDT_email"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="Email"
+        android:background="@drawable/input_background"
+        android:padding="12dp"
+        android:textSize="@dimen/text_box_text_size"
+        android:textColorHint="#F8EFFF"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/poppins_light"
+        app:layout_constraintTop_toBottomOf="@id/login_LBL_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
+
+<!--    &lt;!&ndash; שדה סיסמה &ndash;&gt;-->
+<!--    <EditText-->
+<!--      -->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:hint="Password"-->
+<!--        android:textSize="@dimen/text_box_text_size"-->
+<!--        android:inputType="textPassword"-->
+<!--        android:background="@drawable/input_background"-->
+<!--        android:padding="12dp"-->
+<!--        android:textColorHint="#F8EFFF"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:fontFamily="@font/poppins_light"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/login_EDT_email"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:layout_marginTop="16dp" />-->
+
+
+
+    <!-- Password -->
+    <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/textInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:endIconMode="password_toggle"
+        app:errorEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/login_EDT_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_EDT_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textSize="@dimen/text_box_text_size"
+            android:background="@drawable/input_background"
+            android:textColorHint="#F8EFFF"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/poppins_light"
+            android:padding="12dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- שכחתי סיסמה -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_LBL_forgot"
+        android:text="Forgot password?"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins_medium"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        />
+
+    <!-- כפתור התחברות -->
+    <Button
+        android:id="@+id/login_BTN_login"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        android:text="Log in"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_rounded_purple"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_medium"
+        app:layout_constraintTop_toBottomOf="@id/login_LBL_forgot"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <LinearLayout
+        android:id="@+id/login_LBL_or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/login_BTN_login"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:paddingHorizontal="16dp"
+        tools:ignore="MissingConstraints">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="or"
+            android:textColor="#FFFFFF"
+            android:paddingHorizontal="8dp"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppins_light" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF" />
+
+    </LinearLayout>
+
+
+    <!-- כפתור גוגל -->
+    <Button
+        android:id="@+id/login_BTN_google"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="Continue with Google"
+        android:textColor="#3B3B3B"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_medium"
+        android:background="@drawable/button_rounded_google"
+        android:padding="12dp"
+        android:drawableStart="@drawable/ic_google_24"
+        android:drawablePadding="-12dp"
+        app:layout_constraintTop_toBottomOf="@id/login_LBL_or"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:textAllCaps="false"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/login_BTN_google"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don’t have and account?"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppins_medium"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/login_LBL_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppins_medium"
+            android:textStyle="bold"
+            android:text="@string/signup_underlined" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

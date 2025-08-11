@@ -1,0 +1,341 @@
+<!-- ScrollView -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/explore_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- Back button -->
+        <TextView
+            android:id="@+id/lBL_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="‹ Back"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_medium"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"/>
+
+
+        <!-- Title -->
+
+        <TextView
+            android:id="@+id/explore_in_LBL_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Explore in\nRome"
+            app:layout_constraintTop_toBottomOf="@id/lBL_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_medium"/>
+
+        <GridLayout
+            android:id="@+id/business_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:rowCount="4"
+            app:layout_constraintTop_toBottomOf="@id/explore_in_LBL_title"
+            android:gravity="center"
+            android:padding="0dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/button_business_explore"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints" >
+
+            <LinearLayout
+                android:id="@+id/tile_restaurants"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/button_business_explore"
+                android:padding="2dp"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/restaurant_icon"
+                    android:contentDescription="Restaurant icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kosher\nRestaurants"
+                    android:textColor="#1E1E1E"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginTop="-15dp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/tile_hotels"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/button_business_explore"
+                android:padding="2dp"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:clickable="false"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/hotel_icon"
+                    android:contentDescription="Restaurant icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  Hotels &amp; \nGuesthoues"
+                    android:gravity="center"
+                    android:textColor="#1E1E1E"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginTop="-15dp"/>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/tile_jewish_services"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/button_business_explore"
+                android:padding="2dp"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:clickable="false"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/jewish_services_icon"
+                    android:contentDescription="Restaurant icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Jewish\n Services"
+                    android:textColor="#1E1E1E"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginTop="-7dp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/tile_supermarkets"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/button_business_explore"
+                android:padding="2dp"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:clickable="false"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/rabbi_icon"
+                    android:contentDescription="Restaurant icon"
+                    android:layout_marginTop="-15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ask a Rabbi"
+                    android:textColor="#1E1E1E"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/tile_markets"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/button_business_explore"
+                android:padding="2dp"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:clickable="false"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/market_icon"
+                    android:contentDescription="Restaurant icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Markets &amp;\nSupermarkets"
+                    android:textColor="#1E1E1E"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:layout_marginTop="-10dp"  />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/tile_attractions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/button_business_explore"
+                android:padding="2dp"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:clickable="false"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/attractions_icon"
+                    android:contentDescription="Restaurant icon"
+                    android:layout_marginTop="-17dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Attractions"
+                    android:textColor="#1E1E1E"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginTop="-15dp"
+                    android:gravity="center"
+                  />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/tile_shabbat_hosts"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row="3"
+                android:layout_column="0"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/button_business_explore"
+                android:padding="2dp"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:clickable="false"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/shabbat_hosts_icon"
+                    android:contentDescription="Restaurant icon"
+                    android:layout_marginTop="-20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shabbat"
+                    android:textColor="#1E1E1E"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginTop="-5dp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/tile_chabad_houses"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row="3"
+                android:layout_column="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/button_business_explore"
+                android:padding="2dp"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:clickable="false"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/chabad_houes_icon"
+                    android:contentDescription="Restaurant icon"
+                    android:layout_marginTop="-0dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chabad\nHouses"
+                    android:textColor="#1E1E1E"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginTop="-10dp"
+                  />
+            </LinearLayout>
+        </GridLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

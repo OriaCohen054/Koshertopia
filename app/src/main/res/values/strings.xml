@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Koshertopia</string>
+    <string name="travelers">Travelers</string>
+    <string name="businesses">Businesses</string>
+    <string name="signup_underlined"><u> Sign up</u></string>
+    <string name="back"><![CDATA[< Back]]></string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="other">Other</string>
+    <string name="country_code_placeholder">Country code</string>
+    <string name="default_web_client_id">your ID from firebase</string>
+
+</resources>

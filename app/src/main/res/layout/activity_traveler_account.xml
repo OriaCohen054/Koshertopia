@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/traveler_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_traveler_gradient">
+
+    <!-- תוכן שנגלל -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/content_scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttons_area">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="20dp">
+
+            <!-- שורת כותרת -->
+            <LinearLayout
+                android:id="@+id/title_template"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="8dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="4dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/traveler_icon"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ico_traveler"
+                    android:padding="10dp"
+                    android:background="@drawable/logo_background"
+                    android:scaleType="centerInside" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="8dp">
+
+                    <TextView
+                        android:id="@+id/traveler_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:textColor="#3E3E3E"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/poppins_bold"/>
+
+                    <TextView
+                        android:id="@+id/traveler_last_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last Name"
+                        android:textColor="#3E3E3E"
+                        android:textSize="13sp"
+                        android:layout_marginTop="-6dp"
+                        android:fontFamily="@font/poppins_medium"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+<!--                    <ImageView-->
+<!--                    android:id="@+id/favorite_button"-->
+<!--                    android:layout_width="24dp"-->
+<!--                    android:layout_height="24dp"-->
+<!--                    android:src="@drawable/ic_heart_outline"-->
+<!--                        android:layout_marginEnd="10dp"-->
+<!--                    android:scaleType="centerInside" android:clickable="true" android:focusable="false"/>-->
+
+                    <ImageView
+                    android:id="@+id/menu_button"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_menu_24"
+                    android:contentDescription="Menu"/>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Hello + שאלה -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/hi_traveler_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hi Name 👋"
+                    android:textColor="#3E3E3E"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/poppins_semibold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Where would you like to explore\ntoday?"
+                    android:textColor="#3E3E3E"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_medium" />
+            </LinearLayout>
+
+            <!-- חיפוש -->
+            <AutoCompleteTextView
+                android:id="@+id/traveler_search_country"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="30dp"
+                android:paddingStart="15dp"
+                android:paddingTop="10dp"
+                android:hint="Search for country..."
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:drawablePadding="3dp"
+                android:textSize="13sp"
+                android:drawableStart="@drawable/smaller_search_icon1"
+                android:background="@drawable/button_search_country"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/most_popular_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Most Popular"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="50dp"
+                android:textColor="@color/black" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/countries_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- סרגל תחתון מעוגל וצף עם חלוקה שווה מדויקת -->
+    <LinearLayout
+        android:id="@+id/buttons_area"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:paddingTop="5dp"
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+
+    android:elevation="5dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+        android:clipToPadding="false"
+        android:clipChildren="false">
+
+<!--        android:background="@drawable/bg_bottom_nav_rounded"-->
+
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginTop="13dp"-->
+<!--            android:clipToPadding="false"-->
+<!--            android:clipChildren="false">-->
+
+<!--            &lt;!&ndash; Home &ndash;&gt;-->
+<!--            <FrameLayout-->
+<!--                android:id="@+id/frame_home_button"-->
+<!--                android:layout_width="48dp"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:layout_marginStart="12dp"-->
+<!--                android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/home_button"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:src="@drawable/ic_home_inset"-->
+<!--                    android:scaleType="centerInside" />-->
+<!--            </FrameLayout>-->
+
+<!--            &lt;!&ndash; Notifications &ndash;&gt;-->
+<!--            <FrameLayout-->
+<!--                android:layout_width="48dp"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true"-->
+<!--                app:layout_constraintStart_toEndOf="@id/frame_home_button"-->
+<!--                app:layout_constraintEnd_toStartOf="@id/frame_favorite_button"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintHorizontal_chainStyle="spread_inside">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/notifications_button"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:src="@drawable/ic_notifications_inset"-->
+<!--                    android:scaleType="centerInside" android:clickable="true" android:focusable="false"/>-->
+<!--            </FrameLayout>-->
+
+<!--            &lt;!&ndash; Favorite &ndash;&gt;-->
+<!--            <FrameLayout-->
+<!--                android:id="@+id/frame_favorite_button"-->
+<!--                android:layout_width="48dp"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:layout_marginEnd="12dp"-->
+<!--                android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/favorite_button"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:src="@drawable/ic_favorite_inset"-->
+<!--                    android:scaleType="centerInside" android:clickable="true" android:focusable="false"/>-->
+<!--            </FrameLayout>-->
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+</LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

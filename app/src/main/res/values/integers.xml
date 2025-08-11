@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="phone_length_972">9</integer> <!-- Israel -->
+    <integer name="phone_length_1">10</integer> <!-- USA -->
+    <integer name="phone_length_44">10</integer> <!-- UK -->
+    <integer name="phone_length_33">9</integer> <!-- France -->
+    <integer name="phone_length_49">10</integer> <!-- Germany -->
+    <integer name="phone_length_39">10</integer> <!-- Italy -->
+    <integer name="phone_length_34">9</integer> <!-- Spain -->
+    <integer name="phone_length_7">10</integer> <!-- Russia -->
+    <integer name="phone_length_86">11</integer> <!-- China -->
+    <integer name="phone_length_91">10</integer> <!-- India -->
+    <integer name="phone_length_81">10</integer> <!-- Japan -->
+    <integer name="phone_length_90">10</integer> <!-- Turkey -->
+    <integer name="phone_length_61">9</integer> <!-- Australia -->
+    <integer name="phone_length_31">9</integer> <!-- Netherlands -->
+    <integer name="phone_length_46">9</integer> <!-- Sweden -->
+    <integer name="phone_length_351">9</integer> <!-- Portugal -->
+    <integer name="phone_length_420">9</integer> <!-- Czech Republic -->
+    <integer name="phone_length_48">9</integer> <!-- Poland -->
+    <integer name="phone_length_30">10</integer> <!-- Greece -->
+    <integer name="phone_length_27">9</integer> <!-- South Africa -->
+</resources>

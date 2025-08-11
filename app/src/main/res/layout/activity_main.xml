@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    tools:context=".MainActivity"
+    android:id="@+id/main">
+
+    <!-- לוגו -->
+    <ImageView
+        android:id="@+id/main_IMG_logo"
+        android:layout_width="400dp"
+        android:layout_height="450dp"
+        android:src="@drawable/main_screen"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="Logo" />
+
+
+    <!-- כפתור Businesses -->
+    <Button
+        android:id="@+id/btn_business"
+        android:font="@font/poppins_medium"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:text="@string/businesses"
+        android:textAllCaps="false"
+        android:textColor="#7049A2"
+        android:background="@drawable/button_business"
+        android:layout_marginTop="22dp"
+        app:layout_constraintTop_toBottomOf="@id/main_IMG_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="17sp"
+        />
+
+    <!-- כפתור Travelers -->
+    <Button
+        android:id="@+id/btn_travelers"
+        android:font="@font/poppins_medium"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:text="@string/travelers"
+        android:background="@drawable/button_travelers"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="7dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_business"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="17sp"
+       />
+
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/btn_skip"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:gravity="center"-->
+<!--        android:clickable="true"-->
+<!--        android:focusable="true"-->
+<!--        android:background="@color/transparent"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/btn_travelers"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:layout_marginBottom="-60dp"-->
+<!--        android:layout_marginRight="-45dp">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/main_LBL_skip"-->
+<!--            android:layout_marginEnd="4dp"-->
+<!--            android:fontFamily="@font/poppins_medium"-->
+<!--            android:text="Skip for now"-->
+<!--            android:textColor="#FFFFFF"-->
+<!--            android:textSize="17sp"  android:layout_height="40dp" android:layout_width="120dp"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/main_LBL_skip_icon"-->
+<!--            android:text="→"-->
+<!--            android:fontFamily="@font/poppins_medium"-->
+<!--            android:textColor="#FFFFFF"-->
+<!--            android:layout_marginBottom="4dp"-->
+<!--            android:layout_marginLeft="0dp"-->
+<!--            android:textSize="25sp" android:layout_height="50dp" android:layout_width="50dp"/>-->
+<!--    </LinearLayout>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <CheckBox
+        android:id="@+id/option_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tefillin" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/fragment_opening_hours"
+                android:id="@+id/opening_hours_weekdays"
+                tools:ignore="MissingConstraints"
+                tools:replace="android:text"
+                tools:text="Opening hours – Weekdays" />
+
+            <include
+                layout="@layout/fragment_opening_hours"
+                android:id="@+id/opening_hours_friday"
+                tools:ignore="MissingConstraints"
+                tools:replace="android:text"
+                tools:text="Opening hours – friday" />
+
+            <include layout="@layout/opening_hours_view"/>
+        </LinearLayout>
+
+
+        <!-- Add more views as needed -->
+    </LinearLayout>

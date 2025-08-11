@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="input_background">#50FFFFFF</color>
+    <!-- מצב יום -->
+    <color name="kt_primary">#7B61FF</color>
+    <color name="kt_secondary">#B388FF</color>
+    <color name="kt_surface">#FFFFFF</color>
+    <color name="kt_background">#FFFFFF</color>
+    <color name="kt_hint">#99000000</color>
+
+    <!-- מצב לילה -->
+    <color name="kt_primary_dark">#9FA8FF</color>
+    <color name="kt_secondary_dark">#C7B4FF</color>
+    <color name="kt_surface_dark">#121212</color>
+    <color name="kt_background_dark">#121212</color>
+</resources>

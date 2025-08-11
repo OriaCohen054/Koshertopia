@@ -1,0 +1,99 @@
+<!-- res/layout/item_restaurant_card.xml -->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="16dp"
+    app:strokeColor="#11000000"
+    app:strokeWidth="1dp" android:background="@drawable/button_business_explore">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp" android:background="@drawable/button_business_explore">
+
+        <ImageView
+            android:id="@+id/card_image"
+            android:layout_width="95dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder_img"
+            android:background="@drawable/rounded_12"
+            android:clipToOutline="true" />
+
+        <TextView
+            android:id="@+id/card_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/card_image"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="12dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="Restaurant Name"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_semibold" />
+
+        <TextView
+            android:id="@+id/card_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_title"
+            android:layout_toEndOf="@id/card_image"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="12dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="Meat • Shabbat"
+            android:textSize="14sp"
+            android:textColor="#666" />
+
+<!--        &lt;!&ndash; תגים אמיתיים מסוג Chip &ndash;&gt;-->
+<!--        <LinearLayout-->
+<!--            android:id="@+id/card_tags_row"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/card_subtitle"-->
+<!--            android:layout_toEndOf="@id/card_image"-->
+<!--            android:layout_marginStart="12dp"-->
+<!--            android:layout_marginTop="6dp"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <com.google.android.material.chip.Chip-->
+<!--                android:id="@+id/tag_kid"-->
+<!--                style="@style/Widget.MaterialComponents.Chip.Action"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Kid‑Friendly"-->
+<!--                android:textSize="12sp"-->
+<!--                android:visibility="gone"-->
+<!--                app:chipIconVisible="false"-->
+<!--                app:closeIconVisible="false"-->
+<!--                app:checkedIconVisible="false" />-->
+
+<!--            <com.google.android.material.chip.Chip-->
+<!--                android:id="@+id/tag_access"-->
+<!--                style="@style/Widget.MaterialComponents.Chip.Action"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Accessible"-->
+<!--                android:textSize="12sp"-->
+<!--                android:layout_marginStart="6dp"-->
+<!--                android:visibility="gone"-->
+<!--                app:chipIconVisible="false"-->
+<!--                app:closeIconVisible="false"-->
+<!--                app:checkedIconVisible="false" />-->
+<!--        </LinearLayout>-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/card_favorite"-->
+<!--            android:layout_width="28dp"-->
+<!--            android:layout_height="28dp"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:src="@drawable/ic_heart_outline"-->
+<!--            android:contentDescription="favorite" />-->
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

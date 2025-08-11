@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="country_codes">
+        <item>+972 (Israel)</item>
+        <item>+1 (USA)</item>
+        <item>+44 (UK)</item>
+        <item>+33 (France)</item>
+        <item>+49 (Germany)</item>
+        <item>+39 (Italy)</item>
+        <item>+34 (Spain)</item>
+        <item>+7 (Russia)</item>
+        <item>+86 (China)</item>
+        <item>+91 (India)</item>
+        <item>+81 (Japan)</item>
+        <item>+90 (Turkey)</item>
+        <item>+61 (Australia)</item>
+        <item>+31 (Netherlands)</item>
+        <item>+46 (Sweden)</item>
+        <item>+351 (Portugal)</item>
+        <item>+420 (Czech Republic)</item>
+        <item>+48 (Poland)</item>
+        <item>+30 (Greece)</item>
+        <item>+27 (South Africa)</item>
+    </string-array>
+
+    <string-array name="countries">
+        <item>Israel</item>
+        <item>United States</item>
+        <item>United Kingdom</item>
+        <item>France</item>
+        <item>Germany</item>
+        <item>Italy</item>
+        <item>Spain</item>
+        <item>Russia</item>
+        <item>China</item>
+        <item>India</item>
+        <item>Japan</item>
+        <item>Turkey</item>
+        <item>Australia</item>
+        <item>Netherlands</item>
+        <item>Sweden</item>
+        <item>Portugal</item>
+        <item>Czech Republic</item>
+        <item>Poland</item>
+        <item>Greece</item>
+        <item>South Africa</item>
+    </string-array>
+
+    <string-array name="currency_symbols_by_country">
+        <!-- Israel -->
+        <item>₪</item>
+        <!-- United States -->
+        <item>$</item>
+        <!-- United Kingdom -->
+        <item>£</item>
+        <!-- France -->
+        <item>€</item>
+        <!-- Germany -->
+        <item>€</item>
+        <!-- Italy -->
+        <item>€</item>
+        <!-- Spain -->
+        <item>€</item>
+        <!-- Russia -->
+        <item>₽</item>
+        <!-- China -->
+        <item>¥</item>
+        <!-- India -->
+        <item>₹</item>
+        <!-- Japan -->
+        <item>¥</item>
+        <!-- Turkey -->
+        <item>₺</item>
+        <!-- Australia -->
+        <item>A$</item>
+        <!-- Netherlands -->
+        <item>€</item>
+        <!-- Sweden -->
+        <item>kr</item>
+        <!-- Portugal -->
+        <item>€</item>
+        <!-- Czech Republic -->
+        <item>Kč</item>
+        <!-- Poland -->
+        <item>zł</item>
+        <!-- Greece -->
+        <item>€</item>
+        <!-- South Africa -->
+        <item>R</item>
+    </string-array>
+
+
+    <string-array name="countries_drawable">
+        <item>israel</item>
+        <item>united_states</item>
+        <item>united_kingdom</item>
+        <item>france</item>
+        <item>germany</item>
+        <item>italy</item>
+        <item>spain</item>
+        <item>russia</item>
+        <item>china</item>
+        <item>india</item>
+        <item>japan</item>
+        <item>turkey</item>
+        <item>australia</item>
+        <item>netherlands</item>
+        <item>sweden</item>
+        <item>portugal</item>
+        <item>czech_republic</item>
+        <item>poland</item>
+        <item>greece</item>
+        <item>south_africa</item>
+    </string-array>
+
+    <string-array name="languages_array">
+        <item>Hebrew</item>
+        <item>English</item>
+        <item>French</item>
+        <item>Spanish</item>
+        <item>Russian</item>
+    </string-array>
+
+    <string-array name="days_of_week_en">
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </string-array>
+
+</resources>

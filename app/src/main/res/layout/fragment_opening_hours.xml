@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- זה ישתנה בהתאם ליום -->
+    <TextView
+        android:id="@+id/opening_hours_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opening hours – DAY"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- כאן באים שדות הזמן -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/opening_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Opening time"
+            android:background="@drawable/edittext_background"
+            android:padding="10dp"/>
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/closing_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Closing time"
+            android:background="@drawable/edittext_background"
+            android:padding="10dp"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/background_gradient">
+
+    <LinearLayout
+        android:id="@+id/restaurant_form_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Back -->
+        <TextView
+            android:id="@+id/restaurant_lBL_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="‹ Back"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_medium"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Restaurant"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginTop="8dp" />
+
+        <!-- Uploads row (TOP) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/image_upload_menu"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_upload_white"
+                    android:padding="8dp"
+                    android:background="@drawable/input_background"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:id="@+id/label_upload_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upload Menu"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_light"
+                    android:layout_marginTop="6dp"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="16dp"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/image_upload_kosher"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_certificate_white"
+                    android:background="@drawable/input_background"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:id="@+id/label_upload_kosher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upload Certificate"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_light"
+                    android:layout_marginTop="6dp"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Opening Hours -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opening Hours"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+
+        <FrameLayout
+            android:id="@+id/opening_hours_fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Languages -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Languages"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+
+        <LinearLayout
+            android:id="@+id/languages_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp" />
+
+        <!-- Seating -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seating"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <CheckBox
+                android:id="@+id/checkbox_seating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seating available?"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/input_table_fee"
+                android:layout_width="120dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="10dp"
+                android:inputType="numberDecimal"
+                android:textColorHint="#DDDDDD"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/input_background"
+                android:hint="Table fee" />
+        </LinearLayout>
+
+        <!-- Toilets -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toilets"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <CheckBox
+                android:id="@+id/checkbox_toilets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Toilets available?"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/input_toilet_fee"
+                android:layout_width="120dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="10dp"
+                android:inputType="numberDecimal"
+                android:textColorHint="#DDDDDD"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/input_background"
+                android:hint="Toilet fee" />
+        </LinearLayout>
+
+        <!-- Cuisine -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cuisine Type"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+
+        <RadioGroup
+            android:id="@+id/radio_cuisine_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton android:text="Meat"   android:textColor="#FFFFFF" android:layout_height="20dp" android:layout_width="wrap_content"/>
+            <RadioButton android:text="Dairy"  android:textColor="#FFFFFF" android:layout_height="20dp"  android:layout_width="wrap_content"/>
+            <RadioButton android:text="Pareve" android:textColor="#FFFFFF" android:layout_height="20dp"  android:layout_width="wrap_content"/>
+        </RadioGroup>
+
+        <!-- Kids -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kids"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+
+        <CheckBox android:id="@+id/checkbox_kids_menu"   android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Kids' Menu"      android:textColor="#FFFFFF" />
+        <CheckBox android:id="@+id/checkbox_high_chairs" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="High Chairs"     android:textColor="#FFFFFF" />
+        <CheckBox android:id="@+id/checkbox_play_area"   android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Play Area"       android:textColor="#FFFFFF" />
+
+        <!-- Accessibility -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accessibility"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+
+        <CheckBox android:id="@+id/checkbox_accessible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Accessible"           android:textColor="#FFFFFF" />
+        <CheckBox android:id="@+id/checkbox_stroller"   android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Stroller Access"      android:textColor="#FFFFFF" />
+        <CheckBox android:id="@+id/checkbox_parking"    android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Accessible Parking"   android:textColor="#FFFFFF" />
+
+        <!-- Shabbat Meals -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shabbat Meals"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <CheckBox
+                android:id="@+id/checkbox_friday_meal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Friday night meal available?"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/input_friday_meal_fee"
+                android:layout_width="110dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="10dp"
+                android:inputType="numberDecimal"
+                android:textColorHint="#DDDDDD"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/input_background"
+                android:hint="Meal fee" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <CheckBox
+                android:id="@+id/checkbox_saturday_meal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saturday lunch meal available?"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/input_saturday_meal_fee"
+                android:layout_width="110dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="10dp"
+                android:inputType="numberDecimal"
+                android:textColorHint="#DDDDDD"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/input_background"
+                android:hint="Meal fee" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/checkbox_havdalah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Havdalah service available?"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="8dp" />
+
+        <!-- Jew2Go -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jew2Go"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+        <CheckBox
+            android:id="@+id/checkbox_jew2go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Supports Jew2Go"
+            android:textColor="#FFFFFF" />
+
+        <!-- Notes -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notes"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+        <EditText
+            android:id="@+id/editText_notes"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:hint="Additional notes..."
+            android:textColorHint="#DDDDDD"
+            android:textColor="#FFFFFF"
+            android:gravity="top"
+            android:background="@drawable/input_background"
+            android:inputType="textMultiLine" />
+
+        <!-- Actions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/edit_rest_BTN_cancel"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:background="@drawable/button_rounded_google"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_medium" />
+
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/edit_rest_BTN_save"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:background="@drawable/button_rounded_purple"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/poppins_medium" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="24dp"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,381 @@
+<!-- ScrollView -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_gradient"
+        android:padding="24dp">
+
+        <!-- Back button -->
+        <TextView
+            android:id="@+id/lBL_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="‹ Back"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_medium"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"/>
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/signup_IMG_logo"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="-50dp"
+            android:src="@drawable/logo"
+            android:contentDescription="Logo"
+            app:layout_constraintTop_toBottomOf="@id/lBL_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/signup_LBL_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Business Account"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginTop="-20dp"
+            app:layout_constraintTop_toBottomOf="@id/signup_IMG_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Business name -->
+        <EditText
+            android:id="@+id/signup_EDT_business_name"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:hint="Business name"
+            android:background="@drawable/input_background"
+            android:textColorHint="#F8EFFF"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/poppins_light"
+            android:padding="12dp"
+            android:textSize="@dimen/text_box_text_size"
+            app:layout_constraintTop_toBottomOf="@id/signup_LBL_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Country + Address -->
+        <LinearLayout
+            android:id="@+id/address_layout"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:weightSum="2"
+            app:layout_constraintTop_toBottomOf="@id/signup_EDT_business_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+<!--            <TextView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginEnd="4dp"-->
+<!--                android:layout_weight="0.6"-->
+<!--                android:background="@drawable/input_background"-->
+<!--                android:fontFamily="@font/poppins_light"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:padding="12dp"-->
+<!--                android:text="Country"-->
+<!--                android:textColor="#FFFFFF"-->
+<!--                android:textSize="@dimen/text_box_text_size" />-->
+
+
+            <TextView
+                android:id="@+id/signup_TXT_country"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:background="@drawable/input_background"
+                android:padding="12dp"
+                android:text="Country"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/text_box_text_size"
+                android:gravity="center_vertical"
+                android:drawableEnd="@drawable/ic_arrow_down"
+                android:drawablePadding="8dp"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/poppins_light"
+                />
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.4"
+                android:hint="Address"
+                android:background="@drawable/input_background"
+                android:textColorHint="#F8EFFF"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/poppins_light"
+                android:padding="12dp"
+                android:textSize="@dimen/text_box_text_size"/>
+        </LinearLayout>
+
+        <!-- Email -->
+        <EditText
+            android:id="@+id/signup_business_EDT_email"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:textSize="@dimen/text_box_text_size"
+            android:hint="Email"
+            android:background="@drawable/input_background"
+            android:textColorHint="#F8EFFF"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/poppins_light"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@id/address_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Phone + Owner Phone + Logo in row -->
+        <LinearLayout
+            android:id="@+id/phone_with_logo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintTop_toBottomOf="@id/signup_business_EDT_email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:orientation="vertical"
+                android:layout_marginEnd="8dp">
+
+                <!-- Phone -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/signup_business_TXT_country_code"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.6"
+                        android:background="@drawable/input_background"
+                        android:padding="12dp"
+                        android:text="Business country code"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:gravity="center_vertical"
+                        android:drawableEnd="@drawable/ic_arrow_down"
+                        android:drawablePadding="8dp"
+                        android:layout_marginEnd="4dp"
+                        android:fontFamily="@font/poppins_light"
+                        />
+
+                    <EditText
+                        android:id="@+id/signup_business_TXT_phone"
+                        android:layout_width="0dp"
+                        android:textSize="@dimen/text_box_text_size"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.4"
+                        android:hint="Phone number"
+                        android:background="@drawable/input_background"
+                        android:textColorHint="#F8EFFF"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/poppins_light"
+                        android:padding="12dp" />
+                </LinearLayout>
+
+                <!-- Owner Phone -->
+                <LinearLayout
+                    android:id="@+id/signup_Owner_Phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/signup_owner_TXT_country_code"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.6"
+                        android:background="@drawable/input_background"
+                        android:padding="12dp"
+                        android:text="Owner country code"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:gravity="center_vertical"
+                        android:drawableEnd="@drawable/ic_arrow_down"
+                        android:drawablePadding="8dp"
+                        android:layout_marginEnd="4dp"
+                        android:fontFamily="@font/poppins_light"
+                        />
+
+                    <EditText
+                        android:id="@+id/signup_owner_TXT_phone"
+                        android:layout_width="0dp"
+                        android:textSize="@dimen/text_box_text_size"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.4"
+                        android:hint="Owner's phone number"
+                        android:background="@drawable/input_background"
+                        android:textColorHint="#F8EFFF"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/poppins_light"
+                        android:padding="12dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Logo -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/business_Logo"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ico_busines"
+                    android:padding="12dp"
+                    android:background="@drawable/input_background"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/signup_business_LBL_add_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Logo"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_light"
+                    android:layout_marginTop="4dp"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Password -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signup_layout_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:endIconMode="password_toggle"
+            app:layout_constraintTop_toBottomOf="@id/phone_with_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signup_business_EDT_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textSize="@dimen/text_box_text_size"
+                android:background="@drawable/input_background"
+                android:textColorHint="#F8EFFF"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/poppins_light"
+                android:padding="12dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Confirm Password -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signup_layout_confirm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:endIconMode="password_toggle"
+            app:layout_constraintTop_toBottomOf="@id/signup_layout_password"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signup_business_EDT_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Confirm password"
+                android:inputType="textPassword"
+                android:textSize="@dimen/text_box_text_size"
+                android:background="@drawable/input_background"
+                android:textColorHint="#F8EFFF"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/poppins_light"
+                android:padding="12dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Continue Button -->
+        <Button
+            android:id="@+id/signup_BTN_continue"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:text="Continue"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/button_rounded_purple"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/signup_layout_confirm"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- OR Separator -->
+        <LinearLayout
+            android:id="@+id/signup_LBL_or"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:paddingHorizontal="16dp"
+            app:layout_constraintTop_toBottomOf="@id/signup_BTN_continue">
+
+            <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" android:background="#FFFFFF" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="or" android:textColor="#FFFFFF" android:paddingHorizontal="8dp" android:fontFamily="@font/poppins_light"/>
+            <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" android:background="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- Google Button -->
+        <Button
+            android:id="@+id/signup_BTN_google"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:text="Continue with Google"
+            android:textColor="#3B3B3B"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_medium"
+            android:background="@drawable/button_rounded_google"
+            android:padding="12dp"
+            android:drawableStart="@drawable/ic_google_24"
+            android:drawablePadding="-12dp"
+            android:textAllCaps="false"
+            app:layout_constraintTop_toBottomOf="@id/signup_LBL_or"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/signup_BTN_google"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
